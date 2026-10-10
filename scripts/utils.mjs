@@ -1,3 +1,14 @@
+// Displays the current year and last modified date
+function displayDates() {
+    const year = document.getElementById("currentYear");
+    const lastModified = document.getElementById("lastModified");
+
+    const today = new Date();
+
+    year.innerHTML = today.getFullYear();
+    lastModified.innerHTML = document.lastModified;
+}
+
 // Loads a template from a file
 // and returns it as a string
 export async function loadTemplate(path) {
@@ -21,16 +32,6 @@ export async function loadHeaderFooter() {
 
     const headerElement = document.getElementById("main-header");
     const footerElement = document.getElementById("main-footer");
-
-    const year = document.getElementById("currentYear");
-    const lastModified = document.getElementById("lastModified");
-
-    const today = new Date();
-
-    function displayDates() {
-        year.innerHTML = today.getFullYear();
-        lastModified.innerHTML = document.lastModified;
-    }
 
     renderWithTemplate(headerTemplate, headerElement);
     renderWithTemplate(footerTemplate, footerElement);
