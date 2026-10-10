@@ -13,3 +13,15 @@ export function renderWithTemplate(template, parentElement, data, callback) {
         callback(data);
     }
 }
+
+// Loads the header and footer
+export async function loadHeaderFooter() {
+    const headerTemplate = await loadTemplate("../partials/header.html");
+    const footerTemplate = await loadTemplate("../partials/footer.html");
+
+    const headerElement = document.getElementById("main-header");
+    const footerElement = document.getElementById("main-footer");
+
+    renderWithTemplate(headerTemplate, headerElement);
+    renderWithTemplate(footerTemplate, footerElement);
+}
