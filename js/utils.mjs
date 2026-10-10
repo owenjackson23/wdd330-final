@@ -5,3 +5,11 @@ export async function loadTemplate(path) {
     const template = await response.text();
     return template;
 }
+
+// Renders a template
+export function renderWithTemplate(template, parentElement, data, callback) {
+    parentElement.innerHTML = template;
+    if (callback) {
+        callback(data);
+    }
+}
