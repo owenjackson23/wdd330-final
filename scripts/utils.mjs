@@ -22,6 +22,17 @@ export async function loadHeaderFooter() {
     const headerElement = document.getElementById("main-header");
     const footerElement = document.getElementById("main-footer");
 
+    const year = document.getElementById("currentYear");
+    const lastModified = document.getElementById("lastModified");
+
+    const today = new Date();
+
+    function displayDates() {
+        year.innerHTML = today.getFullYear();
+        lastModified.innerHTML = document.lastModified;
+    }
+
     renderWithTemplate(headerTemplate, headerElement);
     renderWithTemplate(footerTemplate, footerElement);
+    displayDates();
 }
