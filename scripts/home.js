@@ -10,8 +10,8 @@ const extServices = new ExternalServices();
 loadHeaderFooter();
 
 async function temporary() {
-    const destinations = await extServices.getThemeParkDestinations();
-    console.log(destinations);
+    // const destinations = await extServices.getThemeParkDestinations();
+    // console.log(destinations);
 
     const disneyWorld = await extServices.getThemeParkData(disneyWorldId);
     console.log("Walt Disney World Resort:");
@@ -41,11 +41,11 @@ async function temporary() {
     console.log("Blizzard Beach:");
     console.log(blizzardBeach);
 
-    const hours = await extServices.getThemeParkHours(magicKingdomId);
-    console.log(hours);
+    // const hours = await extServices.getThemeParkHours(magicKingdomId);
+    // console.log(hours);
 
-    const opening = new ParkHours(magicKingdomId);
-    opening.getParkHours();
+    // const opening = new ParkHours(magicKingdomId);
+    // opening.getParkHours();
 }
 temporary();
 
@@ -53,6 +53,6 @@ const weatherCard = document.querySelector(".weather-card");
 const weather = new Weather("Orlando", weatherCard);
 weather.init();
 
-// const hoursCard = document.querySelector(".park-hours");
-// const parkHours = new ParkHours(disneyWorldId, hoursCard);
-// parkHours.init();
+const hoursCard = document.querySelector(".park-hours");
+const parkHours = new ParkHours(magicKingdomId, hoursCard);
+parkHours.init();
