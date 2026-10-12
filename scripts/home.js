@@ -7,11 +7,15 @@ const extServices = new ExternalServices();
 loadHeaderFooter();
 
 async function temporary() {
-    const weatherData = await extServices.getWeatherData("New York");
+    const weatherData = await extServices.getWeatherData("Orlando");
     console.log(weatherData);
 
-    const temperature = weatherData.current.heatindex_f;
+    const temperature = weatherData.current.temp_f;
     console.log(temperature);
-    console.log(`The current temperature in New York is ${temperature}°F.`);
+    console.log(`The current temperature in Orlando is ${temperature}°F.`);
+
+    const chanceRain = weatherData.current.chance_of_rain;
+    console.log(chanceRain);
+    console.log(`The chance of rain in Orlando is ${chanceRain}%.`);
 }
 temporary();
