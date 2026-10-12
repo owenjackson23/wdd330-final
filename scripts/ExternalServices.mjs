@@ -52,6 +52,7 @@ export default class ExternalServices {
     constructor() { }
 
     async getWeatherData(location) {
+        console.log(weatherAPIKey);
         const url = `${weatherBaseUrl}key=${weatherAPIKey}&q=${location}`;
         const response = await fetch(url);
         const data = await convertToJson(response);
