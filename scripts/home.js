@@ -10,25 +10,32 @@ loadHeaderFooter();
 
 async function temporary() {
     const disneyWorld = await extServices.getThemeParkData(disneyWorldId);
-    console.log(`Walt Disney World Resort: ${disneyWorld}`);
+    console.log("Walt Disney World Resort:");
+    console.log(disneyWorld);
 
     const magicKingdom = await extServices.getThemeParkData(magicKingdomId);
-    console.log(`Magic Kingdom: ${magicKingdom}`);
+    console.log("Magic Kingdom:");
+    console.log(magicKingdom);
 
     const epcot = await extServices.getThemeParkData(epcotId);
-    console.log(`EPCOT: ${epcot}`);
+    console.log("EPCOT:");
+    console.log(epcot);
 
     const hollywoodStudios = await extServices.getThemeParkData(hollywoodStudiosId);
-    console.log(`Hollywood Studios: ${hollywoodStudios}`);
+    console.log("Hollywood Studios:");
+    console.log(hollywoodStudios);
 
     const animalKingdom = await extServices.getThemeParkData(animalKingdomId);
-    console.log(`Animal Kingdom: ${animalKingdom}`);
+    console.log("Animal Kingdom:");
+    console.log(animalKingdom);
 
     const typhoonLagoon = await extServices.getThemeParkData(typhoonLagoonId);
-    console.log(`Typhoon Lagoon: ${typhoonLagoon}`);
+    console.log("Typhoon Lagoon:");
+    console.log(typhoonLagoon);
 
     const blizzardBeach = await extServices.getThemeParkData(blizzardBeachId);
-    console.log(`Blizzard Beach: ${blizzardBeach}`);
+    console.log("Blizzard Beach:");
+    console.log(blizzardBeach);
 }
 temporary();
 
