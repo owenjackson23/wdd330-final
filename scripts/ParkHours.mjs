@@ -28,6 +28,8 @@ export default class ParkHours {
   async getParkHours() {
     const hoursData = await this.extServices.getThemeParkHours(this.parkId);
 
+    this.parkName = hoursData.name;
+
     const early = hoursData.schedule[0].openingTime;
     this.earlyEntry = early.split("T")[1].substring(0, 5);
 
