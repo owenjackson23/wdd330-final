@@ -1,10 +1,12 @@
 import ExternalServices from "./ExternalServices.mjs";
 import { renderWithTemplate } from "./utils.mjs";
 
-function hoursCardTemplate(parkId, date) {
+function hoursCardTemplate(park, earlyEntry, openingTime, closingTime) {
   return `<div class="hours-card">
-            <h3>${parkId.name} Hours</h3>
-            <p>Open: </p>
+            <h3>${park} Hours</h3>
+            <p>Early Entry: ${earlyEntry}</p>
+            <p>Opening: ${openingTime}</p>
+            <p>Closing: ${closingTime}</p>
           </div>`;
 }
 
@@ -42,7 +44,7 @@ export default class ParkHours {
 
   renderHoursDetails() {
     renderWithTemplate(
-      hoursCardTemplate(this.parkId),
+      hoursCardTemplate(this.parkName, this.earlyEntry, this.openingTime, this.closingTime),
       this.parentElement
     );
   }
