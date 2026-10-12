@@ -13,8 +13,9 @@ export default class ParkHours {
     this.parkId = parkId;
     this.parentElement = parentElement;
     this.parkName = "";
-    this.dateToday = new Date().toISOString().substring(0, 10);
+    this.earlyEntry = "";
     this.parkOpen = "";
+    this.parkClose = "";
 
     this.extServices = new ExternalServices();
   }
@@ -26,8 +27,15 @@ export default class ParkHours {
 
   async getParkHours() {
     const hoursData = await this.extServices.getThemeParkHours(this.parkId);
-    this.parkOpen = hoursData.schedule[0].openingTime;
-    console.log(this.parkOpen);
+
+    const early = hoursData.schedule[0].openingTime;
+    this.earlyEntry = early.split("T")[1].substring(0, 5);
+
+    const opening = hoursData.schedule[1].openingTime;
+    this.parkOpen = opening.split("T")[1].substring(0, 5);
+
+    const closing = hoursData.schedule[1].closingTime;
+    this.parkClose = closing.split("T")[1].substring(0, 5);
   }
 
   renderHoursDetails() {
