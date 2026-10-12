@@ -1,7 +1,7 @@
 import ExternalServices from "./ExternalServices.mjs";
 import { renderWithTemplate } from "./utils.mjs";
 
-function hoursCardTemplate(parkId) {
+function hoursCardTemplate(parkId, date) {
   return `<div class="hours-card">
             <h3>${parkId.name} Hours</h3>
             <p>Open: </p>
@@ -13,6 +13,7 @@ export default class ParkHours {
     this.parkId = parkId;
     this.parentElement = parentElement;
     this.parkName = "";
+    this.dateToday = new Date().toISOString().substring(0, 10);
     this.parkOpen = "";
 
     this.extServices = new ExternalServices();
@@ -25,7 +26,8 @@ export default class ParkHours {
 
   async getParkHours() {
     const hoursData = await this.extServices.getThemeParkHours(this.parkId);
-    // this.parkOpen = hoursData.ssknskgnksg;
+    this.parkOpen = hoursData.schedule[0].openingTime;
+    console.log(this.parkOpen);
   }
 
   renderHoursDetails() {
