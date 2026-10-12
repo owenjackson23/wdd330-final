@@ -9,6 +9,11 @@ function displayDates() {
     lastModified.innerHTML = document.lastModified;
 }
 
+export function dateToday() {
+    const today = new Date();
+    return today;
+}
+
 // Loads a template from a file
 // and returns it as a string
 export async function loadTemplate(path) {

@@ -9,6 +9,9 @@ const extServices = new ExternalServices();
 loadHeaderFooter();
 
 async function temporary() {
+    const destinations = await extServices.getThemeParkDestinations();
+    console.log(destinations);
+
     const disneyWorld = await extServices.getThemeParkData(disneyWorldId);
     console.log("Walt Disney World Resort:");
     console.log(disneyWorld);
@@ -36,6 +39,11 @@ async function temporary() {
     const blizzardBeach = await extServices.getThemeParkData(blizzardBeachId);
     console.log("Blizzard Beach:");
     console.log(blizzardBeach);
+
+    const hours = await extServices.getThemeParkHours(magicKingdomId);
+    console.log(hours);
+
+    const opening = hours;
 }
 temporary();
 
