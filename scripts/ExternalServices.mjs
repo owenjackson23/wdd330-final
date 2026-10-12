@@ -1,5 +1,5 @@
-const weatherStackAPIKey = import.meta.env.VITE_WEATHERSTACK_API_KEY;
-const weatherStackBaseUrl = "http://api.weatherstack.com/";
+const weatherAPIKey = import.meta.env.VITE_WEATHER_API_KEY;
+const weatherBaseUrl = "https://api.weatherapi.com/v1/current.json?";
 
 const themeParksWikiAPIKey = "";
 const themeParksWikiBaseUrl = "";
@@ -21,7 +21,7 @@ export default class ExternalServices {
     constructor() { }
 
     async getWeatherData(location) {
-        const url = `${weatherStackBaseUrl}current?access_key=${weatherStackAPIKey}&query=${location}&units=f`;
+        const url = `${weatherBaseUrl}key=${weatherAPIKey}&q=${location}`;
         const response = await fetch(url);
         const data = await convertToJson(response);
         return data;
