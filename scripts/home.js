@@ -2,6 +2,7 @@ import { loadHeaderFooter } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
 import { disneyWorldId, magicKingdomId, epcotId, hollywoodStudiosId, animalKingdomId, typhoonLagoonId, blizzardBeachId } from "./ExternalServices.mjs";
 import Weather from "./Weather.mjs";
+import ParkHours from "./ParkHours.mjs";
 
 const extServices = new ExternalServices();
 
@@ -43,7 +44,8 @@ async function temporary() {
     const hours = await extServices.getThemeParkHours(magicKingdomId);
     console.log(hours);
 
-    const opening = hours;
+    const opening = new ParkHours(magicKingdomId);
+    opening.getParkHours();
 }
 temporary();
 
