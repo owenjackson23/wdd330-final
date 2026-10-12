@@ -1,6 +1,6 @@
 import { loadHeaderFooter } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
-import { disneyWorldId, magicKingdomId, epcotId, hollywoodStudiosId, animalKingdomId, typhoonLagoonId, blizzardBeachId } from "./ExternalServices.mjs";
+import { parks } from "./ExternalServices.mjs";
 import Weather from "./Weather.mjs";
 import ParkHours from "./ParkHours.mjs";
 
@@ -10,42 +10,12 @@ const extServices = new ExternalServices();
 loadHeaderFooter();
 
 async function temporary() {
-    // const destinations = await extServices.getThemeParkDestinations();
-    // console.log(destinations);
-
-    const disneyWorld = await extServices.getThemeParkData(disneyWorldId);
-    console.log("Walt Disney World Resort:");
-    console.log(disneyWorld);
-
-    const magicKingdom = await extServices.getThemeParkData(magicKingdomId);
-    console.log("Magic Kingdom:");
-    console.log(magicKingdom);
-
-    const epcot = await extServices.getThemeParkData(epcotId);
-    console.log("EPCOT:");
-    console.log(epcot);
-
-    const hollywoodStudios = await extServices.getThemeParkData(hollywoodStudiosId);
-    console.log("Hollywood Studios:");
-    console.log(hollywoodStudios);
-
-    const animalKingdom = await extServices.getThemeParkData(animalKingdomId);
-    console.log("Animal Kingdom:");
-    console.log(animalKingdom);
-
-    const typhoonLagoon = await extServices.getThemeParkData(typhoonLagoonId);
-    console.log("Typhoon Lagoon:");
-    console.log(typhoonLagoon);
-
-    const blizzardBeach = await extServices.getThemeParkData(blizzardBeachId);
-    console.log("Blizzard Beach:");
-    console.log(blizzardBeach);
-
-    // const hours = await extServices.getThemeParkHours(magicKingdomId);
-    // console.log(hours);
-
-    // const opening = new ParkHours(magicKingdomId);
-    // opening.getParkHours();
+    const parksArray = Object.values(parks);
+    for (const park of parksArray) {
+        let parkData = await extServices.getThemeParkData(park.id);
+        console.log(park.name);
+        console.log(parkData);
+    }
 }
 temporary();
 
@@ -54,5 +24,5 @@ const weather = new Weather("Orlando", weatherCard);
 weather.init();
 
 const hoursCard = document.querySelector(".park-hours");
-const parkHours = new ParkHours(magicKingdomId, hoursCard);
+const parkHours = new ParkHours(parks.magicKingdom.id, hoursCard);
 parkHours.init();
