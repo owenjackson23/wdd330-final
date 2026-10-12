@@ -1,6 +1,6 @@
 import { loadHeaderFooter } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
-import { destinationsUrl, disneyWorldUrl } from "./ExternalServices.mjs";
+import { destinationsId, disneyWorldId, magicKingdomId, epcotId, hollywoodStudiosId, animalKingdomId, typhoonLagoonId, blizzardBeachId } from "./ExternalServices.mjs";
 import Weather from "./Weather.mjs";
 
 const extServices = new ExternalServices();
@@ -9,11 +9,26 @@ const extServices = new ExternalServices();
 loadHeaderFooter();
 
 async function temporary() {
-    const themeParks = await extServices.getThemeParkData(destinationsUrl);
-    console.log(themeParks);
+    // const disneyWorld = await extServices.getThemeParkData(disneyWorldId);
+    // console.log(`Walt Disney World Resort: ${disneyWorld}`);
 
-    // const disneyWorld = await extServices.getThemeParkData(disneyWorldUrl);
-    // console.log(disneyWorld);
+    // const magicKingdom = await extServices.getThemeParkData(magicKingdomUrl);
+    // console.log(`Magic Kingdom: ${magicKingdom}`);
+
+    // const epcot = await extServices.getThemeParkData(epcotUrl);
+    // console.log(`EPCOT: ${epcot}`);
+
+    // const hollywoodStudios = await extServices.getThemeParkData(hollywoodStudiosUrl);
+    // console.log(`Hollywood Studios: ${hollywoodStudios}`);
+
+    // const animalKingdom = await extServices.getThemeParkData(animalKingdomUrl);
+    // console.log(`Animal Kingdom: ${animalKingdom}`);
+
+    // const typhoonLagoon = await extServices.getThemeParkData(typhoonLagoonUrl);
+    // console.log(`Typhoon Lagoon: ${typhoonLagoon}`);
+
+    // const blizzardBeach = await extServices.getThemeParkData(blizzardBeachUrl);
+    // console.log(`Blizzard Beach: ${blizzardBeach}`);
 }
 temporary();
 
