@@ -42,3 +42,7 @@ temporary();
 const weatherCard = document.querySelector(".weather-card");
 const weather = new Weather("Orlando", weatherCard);
 weather.init();
+
+// const hoursCard = document.querySelector(".park-hours");
+// const parkHours = new ParkHours(disneyWorldId, hoursCard);
+// parkHours.init();
