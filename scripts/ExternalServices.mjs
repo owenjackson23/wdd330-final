@@ -19,4 +19,11 @@ export async function convertToJson(response) {
 
 export default class ExternalServices {
     constructor() { }
+
+    async getWeatherData(location) {
+        const url = `${weatherStackBaseUrl}current?access_key=${weatherStackAPIKey}&query=${location}&units=f`;
+        const response = await fetch(url);
+        const data = await convertToJson(response);
+        return data;
+    }
 }
