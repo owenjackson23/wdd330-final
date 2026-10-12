@@ -40,6 +40,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Run Build
+        env:
+          VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
