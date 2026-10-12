@@ -35,6 +35,13 @@ export default class ExternalServices {
         return data;
     }
 
+    async getThemeParkDestinations() {
+        const url = `${themeParksBaseUrl}destinations`;
+        const response = await fetch(url, { headers: { 'x-api-key': themeParksAPIKey } });
+        const data = await convertToJson(response);
+        return data;
+    }
+
     async getThemeParkData(parkId) {
         const url = `${themeParksBaseUrl}entity/${parkId}`;
         const response = await fetch(url, { headers: { 'x-api-key': themeParksAPIKey } });
