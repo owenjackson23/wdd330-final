@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/owenjackson23/wdd330-final/issues"
   },
-  "homepage": "https://github.com/owenjackson23/wdd330-final#readme"
+  "homepage": "https://github.com/owenjackson23/wdd330-final#readme",
+  "devDependencies": {
+    "vite": "^8.3.4"
+  }
 }

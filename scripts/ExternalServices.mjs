@@ -1,4 +1,4 @@
-const weatherStackAPIKey = "";
+const weatherStackAPIKey = import.meta.env.VITE_WEATHERSTACK_API_KEY;
 const weatherStackBaseUrl = "http://api.weatherstack.com/";
 
 const themeParksWikiAPIKey = "";
