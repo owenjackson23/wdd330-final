@@ -1,5 +1,4 @@
 import parks from "./parkInfo.mjs";
-import ExternalServices from "./ExternalServices.mjs";
 import { renderListWithTemplate } from "./utils.mjs";
 
 function iconCardTemplate(park) {
@@ -10,4 +9,20 @@ function iconCardTemplate(park) {
             <h3 class="card__name">${park.name}</h3>
           </a>
         </li>`;
+}
+
+export default class ParkList {
+    constructor(listElement) {
+        this.parks = parks;
+        this.listElement = listElement;
+    }
+
+    init() {
+        const list = this.parks;
+        this.renderList(list);
+    }
+
+    renderList(list) {
+        renderListWithTemplate(iconCardTemplate, this.listElement, list);
+    }
 }
