@@ -1,6 +1,6 @@
 import { loadHeaderFooter } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
-import { parks } from "./ExternalServices.mjs";
+import { parks } from "./parkInfo.mjs";
 import Weather from "./Weather.mjs";
 import ParkHours from "./ParkHours.mjs";
 
