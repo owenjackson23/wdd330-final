@@ -14,6 +14,14 @@ export function dateToday() {
     return today;
 }
 
+// gets a query string parameter from the URL
+export function getParam(param) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const park = urlParams.get(param);
+    return park;
+}
+
 // Loads a template from a file
 // and returns it as a string
 export async function loadTemplate(path) {

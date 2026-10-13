@@ -8,8 +8,7 @@ import ParkHours from "./ParkHours.mjs";
 // Load the header and footer
 loadHeaderFooter();
 
-const park = disneyWorldParks.magicKingdom;  // TODO: Make dynamic
-// const park = getParam(...);
+const park = getParam("park");
 
 const parkImage = document.getElementById("parkImage");
 parkImage.setAttribute("src", park.icon);
