@@ -1,4 +1,4 @@
-export const parks = {
+export default parks = {
     "disneyWorld": {
         "name": "Walt Disney World",
         "id": "e957da41-3552-4cf6-b636-5babc5cbc4e5",

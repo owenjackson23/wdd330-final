@@ -30,6 +30,15 @@ export function renderWithTemplate(template, parentElement, data, callback) {
     }
 }
 
+// Renders a list using a template
+export function renderListWithTemplate(template, parentElement, list, position = "afterbegin", clear = false) {
+    const htmlStrings = list.map(template);
+    if (clear) {
+        parentElement.innerHTML = "";
+    }
+    parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
+}
+
 // Loads the header and footer
 export async function loadHeaderFooter() {
     const headerTemplate = await loadTemplate("partials/header.html");
