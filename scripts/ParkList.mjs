@@ -1,4 +1,3 @@
-import { parks } from "./parkInfo.mjs";
 import { renderListWithTemplate } from "./utils.mjs";
 
 function iconCardTemplate(park) {
@@ -12,7 +11,7 @@ function iconCardTemplate(park) {
 }
 
 export default class ParkList {
-    constructor(listElement) {
+    constructor(parks, listElement) {
         this.parks = parks;
         this.listElement = listElement;
     }
