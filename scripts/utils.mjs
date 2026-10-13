@@ -41,8 +41,8 @@ export function renderListWithTemplate(template, parentElement, list, position =
 
 // Loads the header and footer
 export async function loadHeaderFooter() {
-    const headerTemplate = await loadTemplate("partials/header.html");
-    const footerTemplate = await loadTemplate("partials/footer.html");
+    const headerTemplate = await loadTemplate("/wdd330-final/partials/header.html");
+    const footerTemplate = await loadTemplate("/wdd330-final/partials/footer.html");
 
     const headerElement = document.getElementById("main-header");
     const footerElement = document.getElementById("main-footer");
