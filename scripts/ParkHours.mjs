@@ -3,7 +3,7 @@ import { renderWithTemplate } from "./utils.mjs";
 
 function hoursCardTemplate(park, earlyEntry, openingTime, closingTime) {
   return `<div class="hours-card">
-            <h3>${park} Hours</h3>
+            <h2>${park} Hours</h2>
             <p>Early Entry - ${earlyEntry}</p>
             <p>Opening - ${openingTime}</p>
             <p>Closing - ${closingTime}</p>
