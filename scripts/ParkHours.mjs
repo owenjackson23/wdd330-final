@@ -32,11 +32,9 @@ export default class ParkHours {
 
     this.parkName = hoursData.name;
 
-    console.log(hoursData.name, hoursData.schedule[0]);
     const early = hoursData.schedule[0].openingTime;
     this.earlyEntry = early.split("T")[1].substring(0, 5);
 
-    console.log(hoursData.name, hoursData.schedule[1]);
     const opening = hoursData.schedule[1].openingTime;
     this.parkOpen = opening.split("T")[1].substring(0, 5);
 
