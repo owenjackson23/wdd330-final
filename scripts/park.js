@@ -1,4 +1,4 @@
-import { loadHeaderFooter } from "./utils.mjs";
+import { loadHeaderFooter, getParam } from "./utils.mjs";
 // import ExternalServices from "./ExternalServices.mjs";
 import { disneyWorldParks } from "./parkInfo.mjs";
 import ParkHours from "./ParkHours.mjs";
