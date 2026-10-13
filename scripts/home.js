@@ -1,6 +1,6 @@
 import { loadHeaderFooter } from "./utils.mjs";
 // import ExternalServices from "./ExternalServices.mjs";
-// import { parks } from "./parkInfo.mjs";
+import { disneyWorldParks } from "./parkInfo.mjs";
 import Weather from "./Weather.mjs";
 // import ParkHours from "./ParkHours.mjs";
 import ParkList from "./ParkList.mjs";
@@ -11,7 +11,7 @@ import ParkList from "./ParkList.mjs";
 loadHeaderFooter();
 
 const listElement = document.querySelector(".park-list");
-const parkList = new ParkList(listElement);
+const parkList = new ParkList(disneyWorldParks, listElement);
 parkList.init();
 
 // async function temporary() {
