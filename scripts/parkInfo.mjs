@@ -1,9 +1,12 @@
-export const parks = {
+export const disneyResorts = {
     "disneyWorld": {
         "name": "Walt Disney World",
         "id": "e957da41-3552-4cf6-b636-5babc5cbc4e5",
         "icon": "images/disney-world.svg"
-    },
+    }
+};
+
+export const disneyWorldParks = {
     "magicKingdom": {
         "name": "Magic Kingdom",
         "id": "75ea578a-adc8-4116-a54d-dccb60765ef9",
