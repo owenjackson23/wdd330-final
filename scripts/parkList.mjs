@@ -1,4 +1,4 @@
-import parks from "./parkInfo.mjs";
+import { parks } from "./parkInfo.mjs";
 import { renderListWithTemplate } from "./utils.mjs";
 
 function iconCardTemplate(park) {
