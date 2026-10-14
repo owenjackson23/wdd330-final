@@ -1,3 +1,4 @@
+// Returns a park object given the park ID
 export function getPark(parkID, parks) {
     const parksArray = Object.values(parks);
 
@@ -8,7 +9,7 @@ export function getPark(parkID, parks) {
     }
 
     console.log("Could not find a matching park")
-    return
+    return null
 }
 
 export const disneyResorts = {
