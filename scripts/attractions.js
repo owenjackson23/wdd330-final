@@ -15,12 +15,12 @@ attractions.init();
 
 const showsList = document.querySelector(".shows-list");
 
-async function disneyWorldAttractions() {
-    const parksArray = Object.values(disneyWorldParks);
-    for (const park of parksArray) {
-        let attractionData = await extServices.getAttractionsData(park.id);
-        console.log(park.name);
-        console.log(attractionData);
-    }
-}
-disneyWorldAttractions();
+// async function disneyWorldAttractions() {
+//     const parksArray = Object.values(disneyWorldParks);
+//     for (const park of parksArray) {
+//         let attractionData = await extServices.getAttractionsData(park.id);
+//         console.log(park.name);
+//         console.log(attractionData);
+//     }
+// }
+// disneyWorldAttractions();
