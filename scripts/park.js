@@ -10,7 +10,7 @@ loadHeaderFooter();
 
 const parkID = getParam("park");
 console.log(parkID);
-const park = getPark(parkID, disneyResorts.parks);
+const park = getPark(parkID, disneyResorts.disneyWorld.parks);
 console.log(park);
 
 const parkImage = document.getElementById("parkImage");

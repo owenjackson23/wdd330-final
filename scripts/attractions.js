@@ -9,7 +9,7 @@ const extServices = new ExternalServices();
 loadHeaderFooter();
 
 const attractionsList = document.querySelector(".attractions-list");
-const attractions = new AttractionsList(disneyResorts.parks.magicKingdom, attractionsList);
+const attractions = new AttractionsList(disneyResorts.disneyWorld.parks.magicKingdom, attractionsList);
 attractions.init();
 
 

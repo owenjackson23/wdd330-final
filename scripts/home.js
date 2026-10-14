@@ -7,7 +7,7 @@ import ParkList from "./ParkList.mjs";
 loadHeaderFooter();
 
 const listElement = document.querySelector(".park-list");
-const parkList = new ParkList(disneyResorts.parks, listElement);
+const parkList = new ParkList(disneyResorts.disneyWorld.parks, listElement);
 parkList.init();
 
 // async function temporary() {
