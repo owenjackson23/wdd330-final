@@ -21,7 +21,9 @@ export default class ResortAttractions {
         this.parentElement = parentElement;
     }
 
-    init() { }
+    init() {
+        this.renderResortAttractions(this.parks, this.parentElement);
+    }
 
     renderResortAttractions(parks, parentElement) {
         const parksArray = Object.values(parks);
