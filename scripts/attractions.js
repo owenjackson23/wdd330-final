@@ -1,4 +1,4 @@
-import { loadHeaderFooter, getParam } from "./utils.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
 import { disneyWorldParks } from "./parkInfo.mjs";
 
@@ -12,12 +12,12 @@ const showsList = document.querySelector(".shows-list");
 
 
 
-// async function temporary() {
-//     const parksArray = Object.values(disneyWorldParks);
-//     for (const park of parksArray) {
-//         let parkData = await extServices.getThemeParkData(park.id);
-//         console.log(park.name);
-//         console.log(parkData);
-//     }
-// }
-// temporary();
+async function temporary() {
+    const parksArray = Object.values(disneyWorldParks);
+    for (const park of parksArray) {
+        let attractionData = await extServices.getAttractionsData(park.id);
+        console.log(park.name);
+        console.log(attractionData);
+    }
+}
+temporary();
