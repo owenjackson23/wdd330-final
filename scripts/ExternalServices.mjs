@@ -43,7 +43,7 @@ export default class ExternalServices {
     }
 
     async getAttractionsData(parkId) {
-        const url = `${themeParksBaseUrl}entity/${parkId}live`;
+        const url = `${themeParksBaseUrl}entity/${parkId}/live`;
         const response = await fetch(url, { headers: { 'x-api-key': themeParksAPIKey } });
         const data = await convertToJson(response);
         return data;
