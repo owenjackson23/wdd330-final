@@ -3,7 +3,7 @@ import ExternalServices from "./ExternalServices.mjs";
 
 function attractionCardTemplate(attraction) {
     let wait = "";
-    if (attraction.queue !== undefined && attraction.queue.STANDBY !== undefined) {
+    if (attraction.queue !== undefined) {
         wait = `Wait Time: ${attraction.queue.STANDBY.waitTime} min`;
     }
     return `<li class="attraction-card">
