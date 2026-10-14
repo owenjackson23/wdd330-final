@@ -17,11 +17,11 @@ export default class ResortAttractions {
             parkContainer.classList.add("park-attractions");
 
             const parkName = document.createElement("h2");
-            parkName.innerHTML = `${park.Name}`;
+            parkName.innerHTML = `${park.name}`;
             parkName.classList.add("park-name");
 
             const attractionsContainer = document.createElement("ul");
-            this.renderParkAttractions(park.id, attractionsContainer);
+            this.renderParkAttractions(park, attractionsContainer);
 
             parkContainer.appendChild(parkName);
             parkContainer.appendChild(attractionsContainer);
