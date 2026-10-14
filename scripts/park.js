@@ -1,6 +1,6 @@
 import { loadHeaderFooter, getParam } from "./utils.mjs";
 // import ExternalServices from "./ExternalServices.mjs";
-import { disneyWorldParks, getPark } from "./parkInfo.mjs";
+import { disneyResorts, getPark } from "./parkInfo.mjs";
 import ParkHours from "./ParkHours.mjs";
 
 // const extServices = new ExternalServices();
@@ -10,7 +10,7 @@ loadHeaderFooter();
 
 const parkID = getParam("park");
 console.log(parkID);
-const park = getPark(parkID, disneyWorldParks);
+const park = getPark(parkID, disneyResorts.parks);
 console.log(park);
 
 const parkImage = document.getElementById("parkImage");

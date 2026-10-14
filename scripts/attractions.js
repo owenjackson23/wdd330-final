@@ -1,6 +1,6 @@
 import { loadHeaderFooter } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
-import { disneyWorldParks } from "./parkInfo.mjs";
+import { disneyResorts } from "./parkInfo.mjs";
 import AttractionsList from "./AttractionsList.mjs";
 
 const extServices = new ExternalServices();
@@ -9,7 +9,7 @@ const extServices = new ExternalServices();
 loadHeaderFooter();
 
 const attractionsList = document.querySelector(".attractions-list");
-const attractions = new AttractionsList(disneyWorldParks.magicKingdom, attractionsList);
+const attractions = new AttractionsList(disneyResorts.parks.magicKingdom, attractionsList);
 attractions.init();
 
 
