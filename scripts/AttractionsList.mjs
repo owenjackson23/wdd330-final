@@ -6,6 +6,9 @@ function attractionCardTemplate(attraction) {
     if (attraction.queue !== undefined) {
         wait = `Wait Time: ${attraction.queue.STANDBY.waitTime} min`;
     }
+    else if (attraction.queue.STANDBY.waitTime === null) {
+        wait = "";
+    }
     return `<li class="attraction-card">
             <h3>${attraction.name}</h3>
             <p class="status">${attraction.status}</p>
