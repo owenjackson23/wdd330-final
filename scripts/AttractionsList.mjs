@@ -4,10 +4,12 @@ import ExternalServices from "./ExternalServices.mjs";
 function attractionCardTemplate(attraction) {
     let wait = "";
     if (attraction.queue !== undefined) {
-        wait = `Wait Time: ${attraction.queue.STANDBY.waitTime} min`;
-    }
-    else if (attraction.queue.STANDBY.waitTime === null) {
-        wait = "";
+        if (attraction.queue.STANDBY.waitTime === null) {
+            wait = "";
+        }
+        else {
+            wait = `Wait Time: ${attraction.queue.STANDBY.waitTime} min`;
+        }
     }
     return `<li class="attraction-card">
             <h3>${attraction.name}</h3>
