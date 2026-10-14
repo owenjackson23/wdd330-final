@@ -2,10 +2,14 @@ import { renderListWithTemplate } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
 
 function attractionCardTemplate(attraction) {
+    let wait = "";
+    if (attraction.queue !== undefined && attraction.queue.STANDBY !== undefined) {
+        wait = `Wait Time: ${attraction.queue.STANDBY.waitTime} min`;
+    }
     return `<li class="attraction-card">
             <h3>${attraction.name}</h3>
             <p class="status">${attraction.status}</p>
-            <p class="wait">Wait Time: ${attraction.queue.STANDBY.waitTime} min</p>
+            <p class="wait">${wait}</p>
         </li>`;
 }
 
