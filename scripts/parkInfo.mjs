@@ -1,3 +1,16 @@
+export function getPark(parkID, parks) {
+    const parksArray = Object.values(parks);
+
+    for (const park of parksArray) {
+        if (parkID === park.id) {
+            return park;
+        }
+    }
+
+    console.log("Could not find a matching park")
+    return
+}
+
 export const disneyResorts = {
     "disneyWorld": {
         "name": "Walt Disney World",
