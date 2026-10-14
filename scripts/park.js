@@ -8,7 +8,8 @@ import ParkHours from "./ParkHours.mjs";
 // Load the header and footer
 loadHeaderFooter();
 
-const park = getParam("park");
+const parkID = getParam("park");
+console.log(parkID);
 
 const parkImage = document.getElementById("parkImage");
 parkImage.setAttribute("src", park.icon);
