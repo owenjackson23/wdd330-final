@@ -5,7 +5,7 @@ export default defineConfig({
     base: "/wdd330-final/",
 
     build: {
-        outDir: "../dist",
+        outDir: "/dist",
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
