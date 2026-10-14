@@ -1,19 +1,15 @@
 import { loadHeaderFooter } from "./utils.mjs";
-import ExternalServices from "./ExternalServices.mjs";
 import { disneyResorts } from "./parkInfo.mjs";
-import AttractionsList from "./AttractionsList.mjs";
-
-const extServices = new ExternalServices();
+import ResortAttractions from "./ResortAttractions.mjs";
 
 // Load the header and footer
 loadHeaderFooter();
 
 const attractionsList = document.querySelector(".attractions-list");
-const attractions = new AttractionsList(disneyResorts.disneyWorld.parks.magicKingdom, attractionsList);
+const attractions = new ResortAttractions(disneyResorts.disneyWorld.parks, attractionsList);
 attractions.init();
 
-
-const showsList = document.querySelector(".shows-list");
+// const showsList = document.querySelector(".shows-list");
 
 // async function disneyWorldAttractions() {
 //     const parksArray = Object.values(disneyWorldParks);
