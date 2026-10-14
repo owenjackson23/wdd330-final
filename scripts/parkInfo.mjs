@@ -26,11 +26,6 @@ export const disneyWorldParks = {
         "id": "75ea578a-adc8-4116-a54d-dccb60765ef9",
         "icon": "/wdd330-final/images/magic-kingdom.svg"
     },
-    "epcot": {
-        "name": "EPCOT",
-        "id": "47f90d2c-e191-4239-a466-5892ef59a88b",
-        "icon": "/wdd330-final/images/epcot.svg"
-    },
     "hollywoodStudios": {
         "name": "Hollywood Studios",
         "id": "288747d1-8b4f-4a64-867e-ea7c9b27bad8",
@@ -40,6 +35,11 @@ export const disneyWorldParks = {
         "name": "Animal Kingdom",
         "id": "1c84a229-8862-4648-9c71-378ddd2c7693",
         "icon": "/wdd330-final/images/animal-kingdom.svg"
+    },
+    "epcot": {
+        "name": "EPCOT",
+        "id": "47f90d2c-e191-4239-a466-5892ef59a88b",
+        "icon": "/wdd330-final/images/epcot.svg"
     },
     "typhoonLagoon": {
         "name": "Typhoon Lagoon",
